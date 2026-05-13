@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Come to Noida ❤️</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+        color: white;
+        overflow-x: hidden;
+        min-height: 100vh;
+    }
+
+    .container {
+        text-align: center;
+        padding: 80px 20px;
+    }
+
+    .photo{
+      width:400px;
+      height:200px;
+      object-fit:cover;
+      border-radius:20px;
+      border:5px solid white;
+      margin-bottom:25px;
+      max-width: 90%;
+    }
+
+    h1 {
+        font-size: 4rem;
+        margin-bottom: 10px;
+        animation: fadeIn 2s ease-in-out;
+    }
+
+    h2 {
+        font-size: 2rem;
+        font-weight: normal;
+        animation: fadeIn 3s ease-in-out;
+    }
+
+    .card {
+        margin: 40px auto;
+        max-width: 700px;
+        background: rgba(255,255,255,0.15);
+        padding: 30px;
+        border-radius: 20px;
+        backdrop-filter: blur(10px);
+        box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        animation: float 4s infinite ease-in-out;
+    }
+
+    p {
+        font-size: 1.2rem;
+        line-height: 1.8;
+    }
+
+    .buttons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        margin-top: 30px;
+        position: relative;
+        height: 100px;
+    }
+
+    .buttons form {
+        margin: 0;
+    }
+
+    .btn {
+        display: inline-block;
+        padding: 15px 35px;
+        background: white;
+        color: #ff4d6d;
+        font-size: 1.2rem;
+        border-radius: 50px;
+        text-decoration: none;
+        transition: 0.3s;
+        font-weight: bold;
+        border: none;
+        cursor: pointer;
+    }
+
+    .btn:hover {
+        transform: scale(1.1);
+        background: #ffe5ec;
+    }
+
+    .heart {
+        position: fixed;
+        color: rgba(255,255,255,0.7);
+        animation: fall linear infinite;
+        top: -10px;
+        z-index: 0;
+    }
+
+    @keyframes fall {
+        to {
+            transform: translateY(110vh);
+        }
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes float {
+        0%,100% {
+            transform: translateY(0px);
+        }
+        50% {
+            transform: translateY(-10px);
+        }
+    }
+
+    footer {
+        margin-top: 50px;
+        font-size: 1rem;
+        opacity: 0.9;
+    }
+
+    @media(max-width: 600px) {
+
+        h1 {
+            font-size: 2.5rem;
+        }
+
+        h2 {
+            font-size: 1.3rem;
+        }
+
+        p {
+            font-size: 1rem;
+        }
+
+        .btn {
+            padding: 12px 25px;
+            font-size: 1rem;
+        }
+    }
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    
+    <h1>Dear Vaisnavi Pandey ❤️</h1>
+
+    <img src="WhatsApp Image 2026-05-12 at 15.29.37.jpeg" class="photo">
+
+    <h2>
+        ❤️ Whatever Our Souls Are Made of, His/Her and Mine are the Same ❤️
+    </h2>
+
+    <div class="card">
+
+        <p id="daysText"></p>
+
+        <p>
+            I want to see you, hug you, kiss you, pull your cheeks with my dirty hands, and spend hours talking to you while looking at you endlessly. We’ll go on trips together, even if it’s just for 2 days, and roam around Delhi on weekdays just like we used to in Dhanbad.
+        </p>
+
+        <p>
+            You always say,
+            "Achhe se puchho achhe se puchho"
+            <br><br>
+
+            <strong>
+                So Baby, Come to Noida and turn my ordinary days into something beautiful just by being here ✨
+            </strong>
+        </p>
+
+        <div class="buttons">
+
+            <!-- YES BUTTON -->
+
+            <form action="https://formsubmit.co/prajeshanand1410@gmail.com" method="POST">
+
+                <input type="hidden" name="_cc"
+                value="prajeshanand1412@gmail.com">
+
+                <input type="hidden" name="_subject"
+                value="She said YES ❤️">
+
+                <input type="hidden" name="message"
+                value="She accepted the Noida invitation ❤️">
+
+                <input type="hidden" name="_captcha"
+                value="false">
+
+                <button class="btn" type="submit">
+                    Say Yes 💌
+                </button>
+
+            </form>
+
+            <!-- NO BUTTON -->
+
+            <button class="btn" id="noBtn">
+                No
+            </button>
+
+        </div>
+
+    </div>
+
+    <footer>
+        Made with love ❤️ for my Golu
+    </footer>
+
+</div>
+
+<script>
+
+    // DAYS COUNTER
+
+    const lastMet = new Date("2026-05-09");
+    const today = new Date();
+
+    const diffTime = today - lastMet;
+
+    const diffDays = Math.floor(
+        diffTime / (1000 * 60 * 60 * 24)
+    );
+
+    document.getElementById("daysText").innerHTML =
+    `It has been more than ${diffDays} days since I met you, and I miss you so much.`;
+
+
+
+    // FLOATING HEARTS
+
+    for(let i = 0; i < 25; i++) {
+
+        let heart = document.createElement('div');
+
+        heart.classList.add('heart');
+
+        heart.innerHTML = '❤️';
+
+        heart.style.left = Math.random() * 100 + 'vw';
+
+        heart.style.fontSize =
+        (Math.random() * 20 + 15) + 'px';
+
+        heart.style.animationDuration =
+        (Math.random() * 5 + 5) + 's';
+
+        document.body.appendChild(heart);
+    }
+
+
+
+    // RUNAWAY NO BUTTON
+
+    const noBtn = document.getElementById("noBtn");
+
+    noBtn.addEventListener("mouseover", () => {
+
+        const x =
+        Math.floor(Math.random() * (window.innerWidth - 150));
+
+        const y =
+        Math.floor(Math.random() * (window.innerHeight - 100));
+
+        noBtn.style.position = "absolute";
+
+        noBtn.style.left = `${x}px`;
+
+        noBtn.style.top = `${y}px`;
+    });
+
+</script>
+
+</body>
+</html>
